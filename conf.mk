@@ -1,0 +1,17 @@
+VERSION=1.0.1
+PACKAGE=zcs-core-libs
+MAINTAINER=Enrico Weigelt <enrico.weigelt@vnc.biz>
+SECTION=base
+ARCHITECTURE=All
+PRIORITY=optional
+DEPENDS=__NONE__
+DESCRIPTION=Makes ZCS core libraries available in the jsp containers
+DISTPREFIX=$(TOPDIR)/dist
+DISTDIR=$(DISTPREFIX)/$(PACKAGE)-$(VERSION)
+DISTFILE=$(DISTPREFIX)/$(PACKAGE)-$(VERSION).tar.gz
+JAVA?=java
+JAR?=jar
+JAVAC?=javac
+IMAGE_ROOT=$(TOPDIR)/image
+REDMINE_UPLOAD_PROJECT=zcs-core-libs
+REDMINE_UPLOAD_URL=https://redmine.vnc.biz/redmine/
