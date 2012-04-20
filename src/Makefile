@@ -6,7 +6,9 @@ ZCS_CORE_LIBS=\
 	log4j-1.2.16.jar	\
 	zimbracommon.jar	\
 	zimbrastore.jar		\
-	zimbrasoap.jar
+	zimbrasoap.jar		\
+	mail.jar		\
+	commons-logging.jar
 
 ZIMLET_USER_JARDIR=mailboxd/webapps/zimbra/WEB-INF/lib
 ZIMLET_ADMIN_JARDIR=mailboxd/webapps/zimbraAdmin/WEB-INF/lib
