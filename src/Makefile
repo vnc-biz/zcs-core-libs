@@ -21,44 +21,25 @@ INSTALL_SERVICE=y
 
 all:	build
 
-build:	install_user install_admin install_service
+build:	install
 
+install:	$(JAR_FILE_NAME)
+	@true
 ifeq ($(INSTALL_USER),y)
-install_user:	$(JAR_FILE_NAME)
 	@mkdir -p $(IMAGE_ROOT)/$(ZIMLET_USER_JARDIR)
 	@cd $(IMAGE_ROOT)/$(ZIMLET_USER_JARDIR) && \
 	    for i in $(ZCS_CORE_LIBS) ; do ln -sf ../../../../../$(ZIMLET_LIB_JARDIR)/$$i ; done
-else
-install_user:
-	@true
 endif
-
 ifeq ($(INSTALL_ADMIN),y)
-install_admin:	$(JAR_FILE_NAME)
 	@mkdir -p $(IMAGE_ROOT)/$(ZIMLET_ADMIN_JARDIR)
 	@cd $(IMAGE_ROOT)/$(ZIMLET_ADMIN_JARDIR) && \
 	    for i in $(ZCS_CORE_LIBS) ; do ln -sf ../../../../../$(ZIMLET_LIB_JARDIR)/$$i ; done
-else
-install_admin:
-	@true
 endif
-
 ifeq ($(INSTALL_SERVICE),y)
-install_service:	$(JAR_FILE_NAME)
 	@mkdir -p $(IMAGE_ROOT)/$(ZIMLET_SERVICE_JARDIR)
 	@cd $(IMAGE_ROOT)/$(ZIMLET_SERVICE_JARDIR) && \
 	    for i in $(ZCS_CORE_LIBS) ; do ln -sf ../../../../../$(ZIMLET_LIB_JARDIR)/$$i ; done
-else
-install_service:
-	@true
 endif
-
-
-## this creates symlinks from /opt/zimbra for the libs into $HOME, for easier building
-devel_symlinks:
-	@mkdir -p $(HOME)/$(ZIMLET_LIB_JARDIR)
-	@cd $(HOME)/$(ZIMLET_LIB_JARDIR) && \
-	    for i in $(ZCS_CORE_LIBS) ; do ln -sf /opt/zimbra/$(ZIMLET_LIB_JARDIR)/$$i ; done
 
 clean:
 	@true
