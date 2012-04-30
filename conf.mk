@@ -1,4 +1,4 @@
-VERSION=1.0.4
+VERSION=7.2.0.1
 PACKAGE=zcs-core-libs
 MAINTAINER=Enrico Weigelt <enrico.weigelt@vnc.biz>
 SECTION=base
