@@ -1,6 +1,6 @@
 
 TOPDIR=../
-include $(TOPDIR)/conf.mk
+include $(TOPDIR)/common.mk
 
 ZCS_CORE_LIBS_USER=\
 	zimbracommon.jar
