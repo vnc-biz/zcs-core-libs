@@ -1,0 +1,10 @@
+
+This package is highly dependent on the ZCS base version.
+
+You *must not* mix them up, otherwise the ZCS installation will
+be deeply damaged.
+
+Therefore we have separate branches for each ZCS base version:
+
+    master-7.2		baseline for ZCS 7.2.0 based versions
+    7_1_old		old 7.1.x based, untested and likely obsolete
