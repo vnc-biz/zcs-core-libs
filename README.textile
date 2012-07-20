@@ -1,0 +1,7 @@
+This package makes certain ZCS core libraries (from mailboxd/lib/jars/)
+available in the individual servlet containers, by setting symlinks.
+
+Most other zimlet or extension packages will rely on that.
+
+*Note*: this package is heavily tied to the ZCS base version.
+Therefore the first three digits of the package version are aligned to the appropriate ZCS base version.
