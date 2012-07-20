@@ -8,3 +8,4 @@ DEPENDS=
 DESCRIPTION=Makes ZCS core libraries available in the jsp containers
 REDMINE_UPLOAD_PROJECT=zcs-core-libs
 REDMINE_UPLOAD_URL=https://redmine.vnc.biz/redmine/
+LICENSE=LGPLv2
