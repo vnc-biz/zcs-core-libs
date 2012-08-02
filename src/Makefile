@@ -3,10 +3,16 @@ TOPDIR=../
 include $(TOPDIR)/common.mk
 
 ZCS_CORE_LIBS_USER=\
-	zimbracommon.jar
+	zimbracommon.jar		\
+	zimbrastore.jar			\
+	zimbrasoap.jar			\
+	commons-fileupload-1.2.1.jar
 
 ZCS_CORE_LIBS_ADMIN=\
-	zimbracommon.jar
+	zimbracommon.jar		\
+	zimbrastore.jar			\
+	zimbrasoap.jar			\
+	commons-fileupload-1.2.1.jar
 
 ZIMLET_USER_JARDIR=mailboxd/webapps/zimbra/WEB-INF/lib
 ZIMLET_ADMIN_JARDIR=mailboxd/webapps/zimbraAdmin/WEB-INF/lib
