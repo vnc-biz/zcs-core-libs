@@ -1,7 +1,7 @@
 VERSION=7.2.0.2
 PACKAGE=zcs-core-libs
 MAINTAINER=Enrico Weigelt <enrico.weigelt@vnc.biz>
-SECTION=base
+SECTION=free/zcs-base
 ARCHITECTURE=All
 PRIORITY=optional
 DEPENDS=
