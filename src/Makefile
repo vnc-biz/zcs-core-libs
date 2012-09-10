@@ -6,19 +6,22 @@ ZCS_CORE_LIBS_USER=\
 	zimbracommon.jar		\
 	zimbrastore.jar			\
 	zimbrasoap.jar			\
-	commons-fileupload-1.2.1.jar
+	commons-fileupload-1.2.1.jar	\
+	json.jar
 
 ZCS_CORE_LIBS_ZIMLET=\
 	zimbracommon.jar		\
 	zimbrastore.jar			\
 	zimbrasoap.jar			\
-	commons-fileupload-1.2.1.jar
+	commons-fileupload-1.2.1.jar	\
+	json.jar
 
 ZCS_CORE_LIBS_ADMIN=\
 	zimbracommon.jar		\
 	zimbrastore.jar			\
 	zimbrasoap.jar			\
-	commons-fileupload-1.2.1.jar
+	commons-fileupload-1.2.1.jar	\
+	json.jar
 
 ZIMLET_USER_JARDIR=mailboxd/webapps/zimbra/WEB-INF/lib
 ZIMLET_ZIMLET_JARDIR=mailboxd/webapps/zimlet/WEB-INF/lib
