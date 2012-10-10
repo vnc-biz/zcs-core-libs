@@ -7,7 +7,9 @@ ZCS_CORE_LIBS_USER=\
 	zimbrastore.jar			\
 	zimbrasoap.jar			\
 	zimbraclient.jar		\
-	commons-fileupload-1.2.1.jar	\
+	zimbra-native.jar		\
+	zimbra-charset.jar		\
+	commons-fileupload-1.2.2.jar	\
 	json.jar
 
 ZCS_CORE_LIBS_ZIMLET=\
@@ -15,7 +17,9 @@ ZCS_CORE_LIBS_ZIMLET=\
 	zimbrastore.jar			\
 	zimbrasoap.jar			\
 	zimbraclient.jar		\
-	commons-fileupload-1.2.1.jar	\
+	zimbra-native.jar		\
+	zimbra-charset.jar		\
+	commons-fileupload-1.2.2.jar	\
 	json.jar
 
 ZCS_CORE_LIBS_ADMIN=\
@@ -23,7 +27,9 @@ ZCS_CORE_LIBS_ADMIN=\
 	zimbrastore.jar			\
 	zimbrasoap.jar			\
 	zimbraclient.jar		\
-	commons-fileupload-1.2.1.jar	\
+	zimbra-native.jar		\
+	zimbra-charset.jar		\
+	commons-fileupload-1.2.2.jar	\
 	json.jar
 
 ZIMLET_USER_JARDIR=mailboxd/webapps/zimbra/WEB-INF/lib
