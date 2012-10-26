@@ -2,14 +2,6 @@
 TOPDIR=../
 include $(TOPDIR)/common.mk
 
-ZCS_CORE_LIBS_USER=\
-	zimbracommon.jar		\
-	zimbrastore.jar			\
-	zimbrasoap.jar			\
-	zimbraclient.jar		\
-	commons-fileupload-1.2.1.jar	\
-	json.jar			\
-	slf4j-api-1.6.1.jar		
 
 ZCS_CORE_LIBS_ZIMLET=\
 	zimbracommon.jar		\
@@ -19,16 +11,14 @@ ZCS_CORE_LIBS_ZIMLET=\
 	commons-fileupload-1.2.1.jar	\
 	json.jar			\
 	slf4j-api-1.6.1.jar             \
-        commons-httpclient-3.1.jar
+    commons-httpclient-3.1.jar
 
 ZCS_CORE_LIBS_ADMIN=\
-	zimbracommon.jar		\
-	zimbrastore.jar			\
-	zimbrasoap.jar			\
-	zimbraclient.jar		\
-	commons-fileupload-1.2.1.jar	\
-	json.jar			\
-	slf4j-api-1.6.1.jar             
+	zimbrasoap.jar
+
+ZCS_CORE_LIBS_USER=\
+	zimbrasoap.jar
+
 
 ZIMLET_USER_JARDIR=mailboxd/webapps/zimbra/WEB-INF/lib
 ZIMLET_ZIMLET_JARDIR=mailboxd/webapps/zimlet/WEB-INF/lib
