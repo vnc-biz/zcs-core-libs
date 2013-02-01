@@ -10,7 +10,8 @@ ZCS_CORE_LIBS_USER=\
 	zimbra-native.jar		\
 	zimbra-charset.jar		\
 	commons-fileupload-1.2.2.jar	\
-	json.jar
+	json.jar		\
+	slf4j-api-1.6.4.jar
 
 ZCS_CORE_LIBS_ZIMLET=\
 	zimbracommon.jar		\
@@ -20,7 +21,8 @@ ZCS_CORE_LIBS_ZIMLET=\
 	zimbra-native.jar		\
 	zimbra-charset.jar		\
 	commons-fileupload-1.2.2.jar	\
-	json.jar
+	json.jar		\
+	slf4j-api-1.6.4.jar
 
 ZCS_CORE_LIBS_ADMIN=\
 	zimbracommon.jar		\
