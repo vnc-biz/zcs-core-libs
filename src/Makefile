@@ -9,9 +9,12 @@ ZCS_CORE_LIBS_USER=\
 	zimbraclient.jar		\
 	zimbra-native.jar		\
 	zimbra-charset.jar		\
-	commons-fileupload-1.2.2.jar	\
-	json.jar		\
-	slf4j-api-1.6.4.jar
+	commons-codec.jar		\
+	commons-fileupload.jar		\
+	commons-httpclient.jar		\
+	json.jar			\
+	slf4j-api.jar			\
+	servlet-api.jar
 
 ZCS_CORE_LIBS_ZIMLET=\
 	zimbracommon.jar		\
@@ -20,9 +23,12 @@ ZCS_CORE_LIBS_ZIMLET=\
 	zimbraclient.jar		\
 	zimbra-native.jar		\
 	zimbra-charset.jar		\
-	commons-fileupload-1.2.2.jar	\
-	json.jar		\
-	slf4j-api-1.6.4.jar
+	commons-codec.jar		\
+	commons-fileupload.jar		\
+	commons-httpclient.jar		\
+	json.jar			\
+	slf4j-api.jar			\
+	servlet-api.jar
 
 ZCS_CORE_LIBS_ADMIN=\
 	zimbracommon.jar		\
@@ -31,8 +37,12 @@ ZCS_CORE_LIBS_ADMIN=\
 	zimbraclient.jar		\
 	zimbra-native.jar		\
 	zimbra-charset.jar		\
-	commons-fileupload-1.2.2.jar	\
-	json.jar
+	commons-codec.jar		\
+	commons-fileupload.jar		\
+	commons-httpclient.jar		\
+	json.jar			\
+	slf4j-api.jar			\
+	servlet-api.jar
 
 ZIMLET_USER_JARDIR=mailboxd/webapps/zimbra/WEB-INF/lib
 ZIMLET_ZIMLET_JARDIR=mailboxd/webapps/zimlet/WEB-INF/lib
@@ -45,19 +55,21 @@ all:	build
 build:	install
 
 install:	$(JAR_FILE_NAME)
-	@mkdir -p $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR)
-	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf commons-codec-1.6.jar		commons-codec.jar
-	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf commons-fileupload-1.2.2.jar	commons-fileupload.jar
-	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf commons-httpclient-3.1.jar	commons-httpclient.jar
-	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf servlet-api-2.5.jar		servlet-api.jar
-	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf slf4j-api-1.6.4.jar		slf4j-api.jar
-	@mkdir -p $(IMAGE_ROOT)/$(ZIMLET_USER_JARDIR)
+	@mkdir -p \
+	    $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR)		\
+	    $(IMAGE_ROOT)/$(ZIMLET_USER_JARDIR)		\
+	    $(IMAGE_ROOT)/$(ZIMLET_ADMIN_JARDIR)	\
+	    $(IMAGE_ROOT)/$(ZIMLET_ZIMLET_JARDIR)
+	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && \
+	    ln -sf commons-codec-1.6.jar		commons-codec.jar		&& \
+	    ln -sf commons-fileupload-1.2.2.jar		commons-fileupload.jar		&& \
+	    ln -sf commons-httpclient-3.1.jar		commons-httpclient.jar		&& \
+	    ln -sf servlet-api-2.5.jar			servlet-api.jar			&& \
+	    ln -sf slf4j-api-1.6.4.jar			slf4j-api.jar
 	@cd $(IMAGE_ROOT)/$(ZIMLET_USER_JARDIR) && \
 	    for i in $(ZCS_CORE_LIBS_USER) ; do ln -sf ../../../../../$(ZIMLET_LIB_JARDIR)/$$i ; done
-	@mkdir -p $(IMAGE_ROOT)/$(ZIMLET_ADMIN_JARDIR)
 	@cd $(IMAGE_ROOT)/$(ZIMLET_ADMIN_JARDIR) && \
 	    for i in $(ZCS_CORE_LIBS_ADMIN) ; do ln -sf ../../../../../$(ZIMLET_LIB_JARDIR)/$$i ; done
-	@mkdir -p $(IMAGE_ROOT)/$(ZIMLET_ZIMLET_JARDIR)
 	@cd $(IMAGE_ROOT)/$(ZIMLET_ZIMLET_JARDIR) && \
 	    for i in $(ZCS_CORE_LIBS_ZIMLET) ; do ln -sf ../../../../../$(ZIMLET_LIB_JARDIR)/$$i ; done
 
