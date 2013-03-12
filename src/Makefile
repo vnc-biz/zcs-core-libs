@@ -2,7 +2,6 @@
 TOPDIR=../
 include $(TOPDIR)/common.mk
 
-
 ZCS_CORE_LIBS_ZIMLET=\
 	zimbracommon.jar		\
 	zimbrastore.jar			\
@@ -11,17 +10,20 @@ ZCS_CORE_LIBS_ZIMLET=\
 	commons-fileupload-1.2.1.jar	\
 	json.jar			\
 	slf4j-api-1.6.1.jar		\
+	zcs-core-javamail.jar		\
 	commons-httpclient-3.1.jar
 
 ZCS_CORE_LIBS_ADMIN=\
 	zimbrasoap.jar			\
 	zcs-core-commons-pool.jar	\
-	zcs-core-commons-dbcp.jar
+	zcs-core-commons-dbcp.jar	\
+	zcs-core-javamail.jar
 
 ZCS_CORE_LIBS_USER=\
 	zimbrasoap.jar			\
 	zcs-core-commons-pool.jar	\
-	zcs-core-commons-dbcp.jar
+	zcs-core-commons-dbcp.jar	\
+	zcs-core-javamail.jar
 
 ZIMLET_USER_JARDIR=mailboxd/webapps/zimbra/WEB-INF/lib
 ZIMLET_ZIMLET_JARDIR=mailboxd/webapps/zimlet/WEB-INF/lib
@@ -41,6 +43,7 @@ install:	$(JAR_FILE_NAME)
 	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf slf4j-api-1.6.1.jar		slf4j-api.jar
 	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf commons-pool-1.5.5.jar		zcs-core-commons-pool.jar
 	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf commons-dbcp-1.4.jar		zcs-core-commons-dbcp.jar
+	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf mail.jar			zcs-core-javamail.jar
 	@mkdir -p $(IMAGE_ROOT)/$(ZIMLET_USER_JARDIR)
 	@cd $(IMAGE_ROOT)/$(ZIMLET_USER_JARDIR) && \
 	    for i in $(ZCS_CORE_LIBS_USER) ; do ln -sf ../../../../../$(ZIMLET_LIB_JARDIR)/$$i ; done
