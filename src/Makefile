@@ -14,7 +14,8 @@ ZCS_CORE_LIBS_USER=\
 	commons-httpclient.jar		\
 	json.jar			\
 	slf4j-api.jar			\
-	servlet-api.jar
+	servlet-api.jar			\
+	zcs-core-commons-pool.jar
 
 ZCS_CORE_LIBS_ZIMLET=\
 	zimbracommon.jar		\
@@ -28,7 +29,8 @@ ZCS_CORE_LIBS_ZIMLET=\
 	commons-httpclient.jar		\
 	json.jar			\
 	slf4j-api.jar			\
-	servlet-api.jar
+	servlet-api.jar			\
+	zcs-core-commons-pool.jar
 
 ZCS_CORE_LIBS_ADMIN=\
 	zimbracommon.jar		\
@@ -42,7 +44,8 @@ ZCS_CORE_LIBS_ADMIN=\
 	commons-httpclient.jar		\
 	json.jar			\
 	slf4j-api.jar			\
-	servlet-api.jar
+	servlet-api.jar			\
+	zcs-core-commons-pool.jar
 
 ZIMLET_USER_JARDIR=mailboxd/webapps/zimbra/WEB-INF/lib
 ZIMLET_ZIMLET_JARDIR=mailboxd/webapps/zimlet/WEB-INF/lib
@@ -65,7 +68,9 @@ install:	$(JAR_FILE_NAME)
 	    ln -sf commons-fileupload-1.2.2.jar		commons-fileupload.jar		&& \
 	    ln -sf commons-httpclient-3.1.jar		commons-httpclient.jar		&& \
 	    ln -sf servlet-api-2.5.jar			servlet-api.jar			&& \
-	    ln -sf slf4j-api-1.6.4.jar			slf4j-api.jar
+	    ln -sf slf4j-api-1.6.4.jar			slf4j-api.jar			&& \
+	    ln -sf commons-pool-1.6.jar			zcs-core-commons-pool.jar	&& \
+	    ln -sf commons-dbcp-1.4.jar			zcs-core-dbcp.jar
 	@cd $(IMAGE_ROOT)/$(ZIMLET_USER_JARDIR) && \
 	    for i in $(ZCS_CORE_LIBS_USER) ; do ln -sf ../../../../../$(ZIMLET_LIB_JARDIR)/$$i ; done
 	@cd $(IMAGE_ROOT)/$(ZIMLET_ADMIN_JARDIR) && \
