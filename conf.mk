@@ -1,8 +1,7 @@
-VERSION=8.0.2-0.2
+VERSION=8.0.2-0.3
 PACKAGE=zcs-core-libs
 MAINTAINER=Enrico Weigelt <enrico.weigelt@vnc.biz>
 SECTION=free/zcs-base
-ARCHITECTURE=all
 PRIORITY=optional
 DEPENDS=
 DESCRIPTION=Makes ZCS core libraries available in the jsp containers
