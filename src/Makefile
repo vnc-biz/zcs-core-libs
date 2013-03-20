@@ -13,6 +13,8 @@ ZCS_CORE_LIBS_ZIMLET=\
 	zcs-core-javamail.jar		\
 	zcs-core-jaxen.jar		\
 	zcs-core-xerces-impl.jar	\
+	zcs-core-commons-pool.jar	\
+	zcs-core-commons-dbcp.jar	\
 	commons-httpclient-3.1.jar
 
 ZCS_CORE_LIBS_ADMIN=\
@@ -21,7 +23,9 @@ ZCS_CORE_LIBS_ADMIN=\
 	zcs-core-commons-dbcp.jar	\
 	zcs-core-javamail.jar		\
 	zcs-core-jaxen.jar		\
-	zcs-core-xerces-impl.jar
+	zcs-core-xerces-impl.jar	\
+	zcs-core-commons-pool.jar	\
+	zcs-core-commons-dbcp.jar
 
 ZCS_CORE_LIBS_USER=\
 	zimbrasoap.jar			\
@@ -29,7 +33,9 @@ ZCS_CORE_LIBS_USER=\
 	zcs-core-commons-dbcp.jar	\
 	zcs-core-javamail.jar		\
 	zcs-core-jaxen.jar		\
-	zcs-core-xerces-impl.jar
+	zcs-core-xerces-impl.jar	\
+	zcs-core-commons-pool.jar	\
+	zcs-core-commons-dbcp.jar
 
 ZIMLET_USER_JARDIR=mailboxd/webapps/zimbra/WEB-INF/lib
 ZIMLET_ZIMLET_JARDIR=mailboxd/webapps/zimlet/WEB-INF/lib
@@ -52,6 +58,8 @@ install:	$(JAR_FILE_NAME)
 	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf mail.jar			zcs-core-javamail.jar
 	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf jaxen-1.1.1.jar		zcs-core-jaxen.jar
 	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf xercesImpl-2.9.1.jar		zcs-core-xerces-impl.jar
+	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf commons-pool-1.5.5.jar		zcs-core-commons-pool.jar
+	@cd $(IMAGE_ROOT)/$(ZIMLET_LIB_JARDIR) && ln -sf commons-dbcp-1.4.jar		zcs-core-commons-dbcp.jar
 	@mkdir -p $(IMAGE_ROOT)/$(ZIMLET_USER_JARDIR)
 	@cd $(IMAGE_ROOT)/$(ZIMLET_USER_JARDIR) && \
 	    for i in $(ZCS_CORE_LIBS_USER) ; do ln -sf ../../../../../$(ZIMLET_LIB_JARDIR)/$$i ; done
