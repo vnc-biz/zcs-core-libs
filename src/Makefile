@@ -4,9 +4,6 @@ include $(TOPDIR)/common.mk
 
 ZCS_CORE_LIBS_USER=\
 	zimbracommon.jar		\
-	zimbrastore.jar			\
-	zimbrasoap.jar			\
-	zimbraclient.jar		\
 	zimbra-native.jar		\
 	zimbra-charset.jar		\
 	commons-codec.jar		\
@@ -19,10 +16,10 @@ ZCS_CORE_LIBS_USER=\
 	zcs-core-commons-pool.jar
 
 ZCS_CORE_LIBS_ZIMLET=\
+	zimbrastore.jar                 \
+	zimbrasoap.jar                  \
+	zimbraclient.jar                \
 	zimbracommon.jar		\
-	zimbrastore.jar			\
-	zimbrasoap.jar			\
-	zimbraclient.jar		\
 	zimbra-native.jar		\
 	zimbra-charset.jar		\
 	commons-codec.jar		\
@@ -36,9 +33,6 @@ ZCS_CORE_LIBS_ZIMLET=\
 
 ZCS_CORE_LIBS_ADMIN=\
 	zimbracommon.jar		\
-	zimbrastore.jar			\
-	zimbrasoap.jar			\
-	zimbraclient.jar		\
 	zimbra-native.jar		\
 	zimbra-charset.jar		\
 	commons-codec.jar		\
