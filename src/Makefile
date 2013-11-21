@@ -18,7 +18,6 @@ ZCS_CORE_LIBS_ZIMLET=\
 	commons-httpclient-3.1.jar
 
 ZCS_CORE_LIBS_ADMIN=\
-	zimbrasoap.jar			\
 	zcs-core-commons-pool.jar	\
 	zcs-core-commons-dbcp.jar	\
 	zcs-core-javamail.jar		\
@@ -28,7 +27,6 @@ ZCS_CORE_LIBS_ADMIN=\
 	zcs-core-commons-dbcp.jar
 
 ZCS_CORE_LIBS_USER=\
-	zimbrasoap.jar			\
 	zcs-core-commons-pool.jar	\
 	zcs-core-commons-dbcp.jar	\
 	zcs-core-javamail.jar		\
