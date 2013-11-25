@@ -20,7 +20,6 @@ ZCS_CORE_LIBS_ZIMLET=\
 ZCS_CORE_LIBS_ADMIN=\
 	zcs-core-commons-pool.jar	\
 	zcs-core-commons-dbcp.jar	\
-	zcs-core-javamail.jar		\
 	zcs-core-jaxen.jar		\
 	zcs-core-xerces-impl.jar	\
 	zcs-core-commons-pool.jar	\
@@ -29,7 +28,6 @@ ZCS_CORE_LIBS_ADMIN=\
 ZCS_CORE_LIBS_USER=\
 	zcs-core-commons-pool.jar	\
 	zcs-core-commons-dbcp.jar	\
-	zcs-core-javamail.jar		\
 	zcs-core-jaxen.jar		\
 	zcs-core-xerces-impl.jar	\
 	zcs-core-commons-pool.jar	\
