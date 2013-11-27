@@ -29,6 +29,7 @@ ZCS_CORE_LIBS_USER=\
 	zcs-core-commons-pool.jar	\
 	zcs-core-commons-dbcp.jar	\
 	zcs-core-jaxen.jar		\
+	zimbrasoap.jar			\
 	zcs-core-xerces-impl.jar	\
 	zcs-core-commons-pool.jar	\
 	zcs-core-commons-dbcp.jar
