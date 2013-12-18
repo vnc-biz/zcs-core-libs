@@ -15,6 +15,7 @@ ZCS_CORE_LIBS_USER=\
 	json.jar			\
 	slf4j-api.jar			\
 	servlet-api.jar			\
+	zcs-core-commons-dbcp.jar  \
 	zcs-core-commons-pool.jar
 
 ZCS_CORE_LIBS_ZIMLET=\
@@ -30,6 +31,7 @@ ZCS_CORE_LIBS_ZIMLET=\
 	json.jar			\
 	slf4j-api.jar			\
 	servlet-api.jar			\
+    zcs-core-commons-dbcp.jar  \
 	zcs-core-commons-pool.jar
 
 ZCS_CORE_LIBS_ADMIN=\
@@ -45,6 +47,7 @@ ZCS_CORE_LIBS_ADMIN=\
 	json.jar			\
 	slf4j-api.jar			\
 	servlet-api.jar			\
+	zcs-core-commons-dbcp.jar  \
 	zcs-core-commons-pool.jar
 
 ZIMLET_USER_JARDIR=mailboxd/webapps/zimbra/WEB-INF/lib
