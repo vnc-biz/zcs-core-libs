@@ -1,4 +1,4 @@
-VERSION=8.0.2-0.5
+VERSION=8.0.2-0.6
 PACKAGE=zcs-core-libs
 MAINTAINER=Enrico Weigelt <enrico.weigelt@vnc.biz>
 SECTION=free/zcs-base
