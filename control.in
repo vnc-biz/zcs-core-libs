@@ -6,3 +6,4 @@ Architecture: @ARCHITECTURE@
 Maintainer: @MAINTAINER@
 Depends: @DEPENDS@
 Description: @DESCRIPTION@
+Pre-Depends: zcs-zmpkg(>=1.3.1.4)
